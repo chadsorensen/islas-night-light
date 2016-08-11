@@ -1,0 +1,35 @@
+body.night {
+  background: #2F2F4F;
+  animation: pulseNIght 5s alternate infinite; }
+body.day {
+  background: #659D32;
+  animation: pulseDay 5s alternate infinite; }
+
+svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  width: 50vw;
+  height: 50vh;
+  fill: #F6CCDA; }
+
+audio {
+  display: none; }
+
+@keyframes pulseNight {
+  0% {
+    background-color: #2F2F4F; }
+  100% {
+    background-color: #6e6ea9; } }
+@keyframes pulseDay {
+  0% {
+    background-color: #659D32; }
+  100% {
+    background-color: #b2db8d; } }
+
+/*# sourceMappingURL=application.css.map */

@@ -1,0 +1,4 @@
+#!/bin/bash
+sass -w css/:css & \
+coffee -o js -cw js/ \
+&& pg

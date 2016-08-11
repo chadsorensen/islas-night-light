@@ -1,0 +1,54 @@
+$night: #2F2F4F;
+$day: #659D32;
+$note: #F6CCDA;
+$note2: #FFAEB9;
+body {
+  &.night {
+    background: $night;
+    animation: pulseNIght 5s alternate infinite;
+  }
+  &.day {
+    background: $day;
+    animation: pulseDay 5s alternate infinite;
+  }
+}
+
+svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  width: 50vw;
+  height: 50vh;
+  fill: $note;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes pulseNight {
+  0% {
+    background-color: $night;
+  }
+  50% {
+  }
+  100% {
+    background-color: lighten($night, 30%);
+  }
+}
+
+@keyframes pulseDay {
+  0% {
+    background-color: $day;
+  }
+  50% {
+  }
+  100% {
+    background-color: lighten($day, 30%);
+  }
+}
