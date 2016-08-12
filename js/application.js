@@ -13,17 +13,18 @@
   };
 
   checkTime = function() {
-    var now, time;
+    var hour, now, time;
     now = moment();
+    hour = now.hour();
     console.log('now', now.hour());
     return time = (function() {
       switch (false) {
-        case !(now.hour() < 5 && now.hour() > 20):
+        case !(hour < 5 || hour > 20):
           return itsNight();
-        case !(now.hour() < 20 && now.hour() > 5):
+        case !(hour > 5 && hour < 20):
           return itsDay();
         default:
-          return console.log('your guess is as good as mine');
+          return console.log('TIME TRAP');
       }
     })();
   };

@@ -1,18 +1,20 @@
 itsDay = ->
   $('.night').removeClass 'night'
   $('body').addClass 'day'
+
 itsNight = ->
   $('.day').removeClass 'day'
   $('body').addClass 'night'
 
 checkTime = () ->
   now = moment()
+  hour = now.hour()
   console.log 'now', now.hour()
   time = switch
-    when now.hour() < 5  and now.hour() > 20 then itsNight()
-    when now.hour() < 20 and now.hour() > 5 then itsDay()
+    when hour < 5  or hour > 20 then itsNight()
+    when hour > 5 and hour < 20 then itsDay()
     else
-      console.log 'your guess is as good as mine'
+      console.log 'TIME TRAP'
 
 lullabyEvents = ->
   lullaby = document.getElementById "lullaby"
